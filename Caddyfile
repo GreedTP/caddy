@@ -1,28 +1,23 @@
 {
-  git {
-    repo wenger.dev {
-      base_dir /tmp
-      url https://github.com/GreedTP/wenger.dev
-      branch main
-      post pull exec {
-        name Pager
-        command /usr/bin/echo
-        args "pulled wenger.dev repo"
-      }
-    }
-  }
+	git {
+		repo wenger.dev {
+			base_dir {$HOME}/tmp
+			url https://github.com/GreedTP/wenger.dev
+			branch main
+		}
+	}
 }
 
-wenger.dev {
-  route /version* {
-    respond * "1.0.0" 200
-  }
-  route /update/wenger.dev {
-    git update repo wenger.dev
-  }
-  route {
-    file_server {
-      root /tmp/wenger.dev
-    }
-  }
+80: {
+	route /version* {
+		respond * "1.0.1" 200
+	}
+	route /update/wenger.dev {
+		git update repo wenger.dev
+	}
+	route {
+		file_server {
+			root {$HOME}/tmp/wenger.dev
+		}
+	}
 }
