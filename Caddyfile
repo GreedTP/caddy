@@ -1,7 +1,6 @@
 {
     debug
 	local_certs
-	http_port 80
 	https_port 443
 
 	git {
@@ -13,9 +12,9 @@
 	}
 }
 
-wenger.dev {
+:443 {
 	route /version* {
-		respond * "1.0.2" 200
+		respond * "1.0.3" 200
 	}
 	route /update/wenger.dev {
 		git update repo wenger.dev
