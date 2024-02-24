@@ -4,7 +4,7 @@
 
 	git {
 		repo wenger.dev {
-			base_dir /srv
+			base_dir /etc/opt
 			url https://github.com/GreedTP/wenger.dev.git
 			branch main
 		}
@@ -20,7 +20,7 @@
 	}
 	route {
 		file_server {
-			root * /srv/wenger.dev
+			root * /etc/opt/wenger.dev
 		}
 	}
 }
