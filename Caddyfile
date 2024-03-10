@@ -12,9 +12,6 @@
 }
 
 :80 {
-	route /version* {
-		respond * "1.0.4" 200
-	}
 	route /update/wenger.dev {
 		git update repo wenger.dev
 	}
