@@ -18,7 +18,6 @@
 	route {
 		file_server {
 			root /srv/wenger.dev
-			hide /srv/wenger.dev/css/sass
 		}
 	}
 }
