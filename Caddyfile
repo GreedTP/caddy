@@ -14,7 +14,7 @@
 	}
 	route {
 		file_server {
-			root /srv/{$REPO_NAME}{$SITE_PATH}
+			root /srv/{$REPO_NAME}{$SITE_PATH:}
 		}
 	}
 }
