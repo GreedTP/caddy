@@ -1,23 +1,20 @@
 {
-	debug
-	http_port 80
-
 	git {
-		repo wenger.dev {
+		repo {$REPO_NAME} {
 			base_dir /srv
-			url https://github.com/GreedTP/wenger.dev.git
+			url {$REPO_URL}
 			branch main
 		}
 	}
 }
 
 :80 {
-	route /update/wenger.dev {
-		git update repo wenger.dev
+	route /update {
+		git update repo {$REPO_NAME}
 	}
 	route {
 		file_server {
-			root /srv/wenger.dev
+			root /srv/{$REPO_NAME}{$SITE_PATH}
 		}
 	}
 }
