@@ -1,7 +1,7 @@
 # Custom Caddy image
 ![Docker Image Version](https://img.shields.io/docker/v/greedtp/caddy) ![Docker Pulls](https://img.shields.io/docker/pulls/greedtp/caddy) ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/GreedTP/caddy/publish-docker-image.yml)
 
-This is a custom caddy image with the [caddy-git](https://github.com/greenpau/caddy-git) module integrated. You can host your own static website which pulls the files directly from your Git repo.
+This is a custom [caddy docker image](https://hub.docker.com/r/greedtp/caddy) with the [caddy-git](https://github.com/greenpau/caddy-git) module integrated. You can host your own static website which pulls the files directly from your Git repo.
 ## Usage
 ```yaml
 version: "3.9"
